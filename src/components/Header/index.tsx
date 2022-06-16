@@ -1,4 +1,6 @@
-import { Flex, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Icon, IconButton, useBreakpointValue } from "@chakra-ui/react";
+import { RiMenuLine } from "react-icons/ri";
+import { SideBarState } from "../../providers/zustand";
 
 import { Logo } from "./Logo";
 import { NotificationNav } from "./NotificationNav";
@@ -9,6 +11,9 @@ const photo =
   "https://avatars.githubusercontent.com/u/61250054?s=400&u=837cc517ea4008a0260e1aeda274119ed974a17f&v=4";
 
 export const Header = () => {
+  //@ts-ignore
+  const { open } = SideBarState((state) => state);
+
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true,
@@ -25,6 +30,17 @@ export const Header = () => {
       px="6"
       align="center"
     >
+      {!isWideVersion && (
+        <IconButton
+          aria-label="Open navegação"
+          icon={<Icon as={RiMenuLine} />}
+          fontSize="24"
+          variant="unstyled"
+          onClick={open}
+          mr="2"
+        ></IconButton>
+      )}
+
       <Logo />
       {isWideVersion && <SeachBox />}
       <Flex align="center" ml="auto">

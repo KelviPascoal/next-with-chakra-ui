@@ -1,13 +1,19 @@
 import { Avatar, Box, Flex, Text } from "@chakra-ui/react";
 
-export const Profile = () => (
+type ProfileProps = {
+  showProfileData: boolean;
+};
+
+export const Profile = ({ showProfileData }: ProfileProps) => (
   <Flex align="center">
-    <Box>
-      <Text>Kelvi Pascoal</Text>
-      <Text color="gray.300" fontSize="small">
-        kelvi.pascoal@hotmail.com
-      </Text>
-    </Box>
+    {showProfileData && (
+      <Box>
+        <Text>Kelvi Pascoal</Text>
+        <Text color="gray.300" fontSize="small">
+          kelvi.pascoal@hotmail.com
+        </Text>
+      </Box>
+    )}
     <Avatar
       size="md"
       name="Kelvi Pascoal"

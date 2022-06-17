@@ -17,6 +17,7 @@ yarn dev
 - <a href="https://nextjs.org/">Next</a>
 - <a href="https://www.typescriptlang.org/">TypeScript</a>
 - <a href="https://chakra-ui.com/">Chakra UI</a>
+- <a href="https://apexcharts.com/docs/react-charts/">React Apexcharts</a>
 - <a href="https://docs.pmnd.rs/zustand/introduction">Zustand</a>
 - <a href="https://react-hook-form.com/">React Hook Form</a>
 - <a href="https://github.com/jquense/yup">Yup</a>

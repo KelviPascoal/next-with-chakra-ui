@@ -3,11 +3,6 @@ import type { NextPage } from "next";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { Input } from "../components/Form/Input";
 
-type SignInFormData = {
-  email: string;
-  password: string;
-};
-
 const SignIn: NextPage = () => {
   const { register, handleSubmit } = useForm();
 
